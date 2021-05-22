@@ -692,13 +692,14 @@ void    days2mdhms
 
 void    invjday
         (
-          double jd, int timezone, bool daylightsaving,
+          double jdin, int timezone, bool daylightsaving,
           int& year, int& mon, int& day,
           int& hr, int& minute, double& sec
         )
    {
      int leapyrs;
      double    days, tu, temp;
+     double    jd = jdin;
 
 	 jd += (double)timezone / 24.0;
 
