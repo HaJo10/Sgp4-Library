@@ -699,9 +699,10 @@ void    invjday
    {
      int leapyrs;
      double    days, tu, temp;
-     double    jd = jdin;
+     double    jd = 0;
 
-	 jd += (double)timezone / 24.0;
+     jd = jdin;       // damit Parameter nicht verändert wird
+     jd += (double)timezone / 24.0;
 
      /* --------------- find year and days of the year --------------- */
      temp    = jd - 2415019.5;
